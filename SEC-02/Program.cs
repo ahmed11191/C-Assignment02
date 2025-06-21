@@ -1,4 +1,6 @@
-﻿namespace SEC_02
+﻿using System;
+
+namespace SEC_02
 {
     internal class Program
     {
@@ -11,18 +13,18 @@
             //int z;//int x = 7, y, z;
             #endregion
             #region value data type
-            int x;
-            x = 4;
-        Int32 y =9;
+          //  int x;
+            //x = 4;
+            //  Int32 y =9;
             //y =9 x=4
-            y = x;
+            //y = x;
             //x and y= 4
-            x++;
+            //x++;
             //x=x+1
             //x+=1
             //x=5,y=4
-            Console.WriteLine(x);
-            Console.WriteLine(y);
+            //Console.WriteLine(x);
+            //Console.WriteLine(y);
             #endregion
             #region reference
             Point p1;
@@ -44,15 +46,15 @@
 
             #endregion
             #region Object
-             Point3D point3D = new Point3D();
+       //      Point3D point3D = new Point3D();
 
-            point3D.y = 2;      
-            point3D.z = 3;
+         //   point3D.y = 2;      
+           // point3D.z = 3;
 
 
-            Point p4 = 
-            p4 = new Point();
-            p4 = new Point3D();
+            //Point p4 = 
+            //p4 = new Point();
+            //p4 = new Point3D();
 
 
             object obj;
@@ -61,26 +63,49 @@
             obj = new Point3D();
             obj = new Point ();
             obj = new Temp();
-            obj = 123;
-            obj = 9.4;
-            obj = 'c';
+            obj = 123; //boxing
+            obj = 9.4; //boxing
+            obj = 'c'; //boxing
             obj = "Ahmed zaghlou";
+            obj = 3;
+            int x = 1, y = 1;
+            int sum;
+            string s = "Ahmed Zaghlou";
+            string q = new string ("Ahmed Zaghlou");
 
-            #endregion
-        
+            //q = s;
+             //s = q;
+
+            //   Cosole.WriteLine(x.ToString());
+            // Console.WriteLine(s.ToString());
+            //Console.WriteLine(p1.ToString());
+       //     Console.WriteLine(x.Equals(y));
+         //   Console.WriteLine(s.Equals(q));
+           // Console.WriteLine(p1.Equals(p2));
+            //Console.WriteLine(x.GetHashCode());
+            //Console.WriteLine(s.GetHashCode());
+            //Console.WriteLine(p1.GetHashCode());
+            //Console.WriteLine(p2.GetHashCode());
+            Console.WriteLine(x.GetType());
+            Console.WriteLine(s.GetType());
+            Console.WriteLine(p1.GetType());           
+            Console.WriteLine(p2.GetType());
+
+            //
+            //sum = x + y + s; error (type Related Error , cannot convert from string to int) 
+            ;          //  sum = x + y + (int)obj;
+                       //   Console.WriteLine(sum);
         }
         //print (7,5)
         //print(6.5,4.2)
         //Print('a',,'b')
 
-                   
-        static void Print<T>(T x, T y)
-        {    Console.WriteLine(x);
-             Console.WriteLine(y);
-        }
+       // static void Print<T>(object x, object y)
+        //{    Console.WriteLine(x);
+          //   Console.WriteLine(y);
+        //}
 
-        Print<int>(7,5);
-
+         
 
         //   static void Print(double x, double y)
         //{    Console.WriteLine(x);

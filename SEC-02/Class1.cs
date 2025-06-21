@@ -11,6 +11,15 @@ namespace SEC_02
     {
         public int x;
         public int y;
+        public override string ToString()
+        {
+            return $"({x},{y})";
+        }
+        public override bool Equals (object? obj)
+        {
+            //return base.Equals(obj);
+            return x == ((Point)obj).x  && y==((Point)obj).y;
+        }
 
     }
     internal class Point3D :Point
